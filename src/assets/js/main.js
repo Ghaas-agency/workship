@@ -1,3 +1,6 @@
+var d = new Date();
+document.getElementsByClassName('year')[0].innerText = d.getFullYear() + " ";
+
 window.onclick = function(e) {
   if (e.target.parentElement.className === 'index-faq__item--toggle') {
     var parent = e.target.parentElement;

@@ -6,13 +6,50 @@
 
 .index {
   &-hero {
-    padding: 100px 25%;
+    margin-top: -100px;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    min-height: 700px;
     background-color: $yellow;
     text-align: center;
+    background-image: url('../img/workship-index-hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+    &--divider-top {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    @media only screen and (max-width: 979px) {
+      padding-left: 15%;
+      padding-right: 15%;
+      background-position: 60% bottom;
+    }    
+
+    @media only screen and (max-width: 767px) {
+      padding-left: 3%;
+      padding-right: 3%;
+      margin-top: -135px;
+      background-position: right bottom;
+      background-size: 150%;
+    }
   }
 
   &-how {
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
 
     &__items {
@@ -24,19 +61,40 @@
     &__item {
       flex: 1;
       padding: 10px 30px;
+      min-width: 300px;
+
+      img {
+        max-height: 150px;
+      }
     }
 
     p.h3 {
       margin-top: 50px;
       margin-right: 15%;
       margin-left: 15%;
+      
+      @media only screen and (max-width: 767px) {
+        margin-right: 3%;
+        margin-left: 3%;
+      }
     }
   }
 
   &-advantage {
     padding: 100px 15%;
+    padding-top: 250px;
     background-color: $yellow;
     text-align: center;
+    position: relative;
+
+    &--divider-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      transform: rotate(180deg);
+    }
 
     h2 {
       margin-bottom: 70px;
@@ -54,6 +112,15 @@
     &__left,
     &__right {
       flex: 2;
+      min-width: 300px;
+
+      img {
+        max-height: 150px;
+      }
+    }
+
+    &__left {
+      text-align: center;
     }
 
     &__right {
@@ -64,6 +131,10 @@
   &-faq {
     padding: 100px 15%;
     text-align: center;
+    
+    @media only screen and (max-width: 767px) {
+      padding: 100px 3%;
+    }
 
     &__item {
       border: 1px solid lighten($grey, 50%);
@@ -94,6 +165,28 @@
           margin: 10px;
         }
       }
+    }
+  }
+
+  &-jobs {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+
+    @media only screen and (max-width: 767px) {
+      padding-left: 3%;
+      padding-right: 3%;
+    }    
+
+    h2 {
+      margin-bottom: 50px;
+    }
+    
+    &__item {
+      text-align: left;
+      margin-bottom: 50px;
     }
   }
 }

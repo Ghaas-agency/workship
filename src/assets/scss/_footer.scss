@@ -1,17 +1,14 @@
-.footer-copyright {
-  padding: 20px 0;
-  background-color: #1E1E1E;
-  color: #888888;
+footer {
+  background-color: $yellow;
+  padding-top: 50px;
+  padding-bottom: 35px;
   text-align: center;
-}
 
-.footer-copyright a, .footer-copyright small {
-  color: #616161;
-  color: rgba(255, 255, 255, 0.3);
-  border: none !important;
-}
-
-.footer-copyright a:hover,
-.footer-copyright a:focus {
-  text-decoration: underline;
+  p {
+    font-size: 15px;
+    
+    a {
+      color: $grey;
+    }
+  }
 }
