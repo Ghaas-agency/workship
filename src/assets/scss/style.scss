@@ -1,7 +1,6 @@
 @import 'variables';
 @import 'globals';
 @import 'components';
-@import 'partials';
 @import 'header';
 @import 'footer';
 
@@ -35,11 +34,66 @@
   }
 
   &-advantage {
-    padding: 100px 0;
+    padding: 100px 15%;
     background-color: $yellow;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 70px;
+    }
+    
+    &__items {
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    &__left,
+    &__right {
+      flex: 2;
+    }
+
+    &__right {
+      flex: 3;
+    }
   }
 
   &-faq {
-    padding: 100px 0;
+    padding: 100px 15%;
+    text-align: center;
+
+    &__item {
+      border: 1px solid lighten($grey, 50%);
+      border-radius: 5px;
+      margin: 30px 0;
+      padding: 30px;
+      padding-bottom: 20px;
+      position: relative;
+      text-align: left;
+
+      &--answer {
+        display: none;
+
+        &:first-child {
+          display: block;
+        }
+      }
+
+      &--toggle {
+        position: absolute;
+        right: 0px;
+        top: 17px;
+        cursor: pointer;
+
+        img {
+          height: 35px;
+          width: 35px;
+          margin: 10px;
+        }
+      }
+    }
   }
 }
