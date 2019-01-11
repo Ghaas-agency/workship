@@ -6,11 +6,13 @@ html {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background-color: #f5f5f5;
 }
 
 body {
   margin: 0;
   color: $grey;
+  background-color: #ffffff;
   font-family: 'Inter UI', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -18,6 +20,7 @@ body {
   font-kerning: normal;
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   font-size: 16px;
 }
@@ -75,6 +78,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
+  -moz-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 
@@ -140,6 +144,7 @@ figure {
 
 hr {
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -198,6 +203,7 @@ fieldset {
 
 legend {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -213,6 +219,7 @@ textarea {
 [type=checkbox],
 [type=radio] {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -245,22 +252,26 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 
 * {
   -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 *:before {
   -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 *:after {
   -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -357,6 +368,8 @@ pre {
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -441,6 +454,8 @@ hr {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  margin-bottom: -webkit-calc(15px - 1px);
+  margin-bottom: -moz-calc(15px - 1px);
   margin-bottom: calc(15px - 1px);
   background: hsla(0, 0%, 0%, 0.2);
   border: none;
@@ -475,6 +490,8 @@ th {
 }
 
 li {
+  margin-bottom: -webkit-calc(15px / 2);
+  margin-bottom: -moz-calc(15px / 2);
   margin-bottom: calc(15px / 2);
 }
 
@@ -488,13 +505,21 @@ ul li {
 
 li>ol {
   margin-left: 15px;
+  margin-bottom: -webkit-calc(15px / 2);
+  margin-bottom: -moz-calc(15px / 2);
   margin-bottom: calc(15px / 2);
+  margin-top: -webkit-calc(15px / 2);
+  margin-top: -moz-calc(15px / 2);
   margin-top: calc(15px / 2);
 }
 
 li>ul {
   margin-left: 15px;
+  margin-bottom: -webkit-calc(15px / 2);
+  margin-bottom: -moz-calc(15px / 2);
   margin-bottom: calc(15px / 2);
+  margin-top: -webkit-calc(15px / 2);
+  margin-top: -moz-calc(15px / 2);
   margin-top: calc(15px / 2);
 }
 
@@ -511,6 +536,8 @@ p *:last-child {
 }
 
 li>p {
+  margin-bottom: -webkit-calc(1.45rem / 2);
+  margin-bottom: -moz-calc(1.45rem / 2);
   margin-bottom: calc(1.45rem / 2);
 }
 
@@ -560,6 +587,8 @@ th {
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
+  padding-bottom: -webkit-calc(0.725rem - 1px);
+  padding-bottom: -moz-calc(0.725rem - 1px);
   padding-bottom: calc(0.725rem - 1px);
 }
 
@@ -576,6 +605,8 @@ td:last-child {
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
@@ -676,14 +707,17 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
+
   h1,
   .h1 {
     font-size: 2.5em;
   }
+
   h2,
   .h2 {
     font-size: 2em;
   }
+
   h3,
   .h3 {
     font-size: 1.5em;
@@ -691,14 +725,17 @@ h6 {
 }
 
 @media screen and (max-width: 480px) {
+
   h1,
   .h1 {
     font-size: 2em;
   }
+
   h2,
   .h2 {
     font-size: 1.625em;
   }
+
   h3,
   .h3 {
     font-size: 1.375em;
@@ -715,6 +752,8 @@ select {
   border: none;
   border-bottom: 2px solid #aaaaaa;
   -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 100%;
   background-color: unset;
