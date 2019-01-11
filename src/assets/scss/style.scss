@@ -20,7 +20,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     position: relative;
 
     &--divider-top {
@@ -220,7 +220,7 @@
   }
 
   &-jobs {
-    padding-top: 50px;
+    padding-top: 25px;
     padding-bottom: 100px;
     padding-left: 15%;
     padding-right: 15%;
@@ -235,9 +235,50 @@
       margin-bottom: 50px;
     }
 
-    &__item {
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      padding-bottom: 15px;
+      color: initial;
+      border: unset !important;
+      margin: 10px 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      img {
+        max-width: 100px;
+      }
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+      
+      @media only screen and (max-width: 767px) {
+        background-color: #f5f5f5;
+      }      
+    }
+
+    &__left,
+    &__right {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      min-width: 200px;
+    }
+
+    &__right {
+      flex: 4;
       text-align: left;
-      margin-bottom: 50px;
+
+      h3 {
+        color: $violet;
+        border-bottom: 1px solid $violet;
+      }
     }
   }
 }

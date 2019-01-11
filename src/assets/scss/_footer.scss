@@ -9,6 +9,12 @@ footer {
     
     a {
       color: $grey;
+      margin: 10px;
+      border: none !important;
+
+      img {
+        max-width: 25px;
+      }
     }
   }
 }
