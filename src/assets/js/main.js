@@ -1,5 +1,7 @@
 var d = new Date();
 document.getElementsByClassName('year')[0].innerText = d.getFullYear() + " ";
+var menuToggle = true;
+var headerList = document.getElementById('header-menu-list');
 
 window.onclick = function(e) {
   if (e.target.parentElement.className === 'index-faq__item--toggle') {
@@ -12,6 +14,18 @@ window.onclick = function(e) {
     } else {
       text.style.display = 'none';
       img.src = 'assets/img/arrow-down.svg';
+    }
+  }
+
+  if (e.target.className === 'nav-menu-icon') {
+    if (menuToggle) {
+      headerList.style.display = "block";
+      menuToggle = false;
+      e.target.src = "assets/img/close.svg";
+    } else {
+      headerList.style.display = "none";
+      menuToggle = true;
+      e.target.src = "assets/img/menu.svg";
     }
   }
 }
