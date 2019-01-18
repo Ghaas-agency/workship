@@ -22,9 +22,9 @@ html(lang="en")
           img(src="assets/img/menu.svg", alt="menu icon").nav-menu-icon
           ul#header-menu-list
             li
-              a(href="") How It Works
+              a(href="#how") How It Works
             li
-              a(href="") The Workship Advantage
+              a(href="#advantage") The Workship Advantage
             li
               a(href="") Login
 
@@ -36,7 +36,7 @@ html(lang="en")
           a.button(href="#!") Start Now
         img.index-hero--divider-top(src="assets/img/divider-1.svg")
 
-      section.index-how
+      section.index-how#how
         .container
           h2 How It Works
           .index-how__items
@@ -55,7 +55,7 @@ html(lang="en")
           p.h3 Uncomplicated, minimal effort and opportunities you’d not find anywhere else.
           a.button Try Workship
 
-      section.index-advantage
+      section.index-advantage#advantage
         img.index-advantage--divider-top(src="assets/img/divider-1.svg")
         .container
           h2 The Workship Advantage
@@ -142,4 +142,5 @@ html(lang="en")
           span.year
           | Workship
 
+    script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js")
     script(src="assets/js/main.js")

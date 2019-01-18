@@ -29,3 +29,20 @@ window.onclick = function(e) {
     }
   }
 }
+
+/* Smooth scroll. */
+if (typeof SmoothScroll !== 'undefined') {
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    offset: function(anchor, toggle) {
+      if (anchor.id === 'advantage') {
+        return -200;
+      } else {
+        return 0;
+      }
+    },
+    updateURL: false,
+    easing: 'easeInOutCubic',
+    speed: 600,
+	  speedAsDuration: true,
+  });
+}
