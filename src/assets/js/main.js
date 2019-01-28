@@ -4,16 +4,15 @@ var menuToggle = true;
 var headerList = document.getElementById('header-menu-list');
 
 window.onclick = function(e) {
-  if (e.target.parentElement.className === 'index-faq__item--toggle') {
-    var parent = e.target.parentElement;
-    var text = parent.parentElement.getElementsByClassName('index-faq__item--answer')[0];
-    var img = parent.firstChild;
-    if (text.style.display === 'none') {
-      text.style.display = 'block';
-      img.src = 'assets/img/arrow-up.svg';
-    } else {
-      text.style.display = 'none';
-      img.src = 'assets/img/arrow-down.svg';
+  if (e.target.className.indexOf('index-faq__item') !== -1 || 
+  e.target.parentElement.className.indexOf('index-faq__item') !== -1 ||
+  e.target.parentElement.parentElement.className.indexOf('index-faq__item') !== -1) {
+
+    var parent = e.target.closest('.index-faq__item');
+    if (parent.className === 'index-faq__item') {
+      parent.className = "index-faq__item index-faq__item--active";
+    } else if (parent.className === 'index-faq__item index-faq__item--active') {
+      parent.className = "index-faq__item";
     }
   }
 
