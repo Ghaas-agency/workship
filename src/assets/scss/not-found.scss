@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'globals';
+@import 'components';
+@import 'header';
+@import 'footer';
+
+.error404 {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--top-right,
+  &--bottom-left {
+    position: fixed;
+    margin: 0;
+    height: 75%;
+    z-index: 0;
+
+    @media only screen and (max-width: 767px) {
+      height: 50%;
+    }
+  }
+
+  &--top-right {
+    top: 0;
+    right: 0;
+  }
+
+  &--bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+
+  .container {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+
+    img {
+      max-width: 200px;
+    }
+
+    h1 {
+      @media only screen and (max-width: 767px) {
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+
+      & + p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  &--action {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+}
