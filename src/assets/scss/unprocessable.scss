@@ -18,6 +18,10 @@
   &--top-right {
     top: 0;
     right: 0;
+
+    @media only screen and (max-width: 767px) {
+      height: 35%;
+    }
   }
 
   &--bottom-left {
